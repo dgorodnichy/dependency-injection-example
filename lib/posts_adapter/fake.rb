@@ -4,7 +4,7 @@ module PostsAdapter
   class Fake
     def initialize(username)
       @client = OpenStruct.new(
-        items: [
+        posts: [
           {
             title: 'Signal v Noise exits Medium[Fake adapter]',
             pubDate: '2019-02-11 15:51:56',
@@ -22,7 +22,7 @@ module PostsAdapter
     end
 
     def user_posts
-      @client.items
+      @client.posts
     end
   end
 end
