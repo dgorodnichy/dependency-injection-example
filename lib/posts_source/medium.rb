@@ -1,6 +1,6 @@
 require 'medium_api'
 
-module PostsAdapter
+module PostsSource
   class Medium
     def initialize(username)
       @client = ::MediumAPI.new(username)

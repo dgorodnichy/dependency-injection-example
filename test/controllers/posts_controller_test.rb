@@ -13,6 +13,6 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   def test_index_returns_posts
     get posts_url
 
-    assert_equal JSON.parse(response.body)[0]['title'], 'Signal v Noise exits Medium[Fake adapter]'
+    assert_equal 'Signal v Noise exits Medium[Fake adapter]', JSON.parse(response.body)[0]['title']
   end
 end

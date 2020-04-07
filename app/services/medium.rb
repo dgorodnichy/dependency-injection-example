@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require 'posts_adapter/medium'
+require 'posts_source/medium'
 
 class Medium
-  cattr_accessor :adapter
+  cattr_accessor :source
 
-  self.adapter = ::PostsAdapter::Medium
+  self.source = PostsSource::Medium
 
   def initialize(name = nil)
-    @client = adapter.new(name)
+    @client = source.new(name)
   end
 
   def posts

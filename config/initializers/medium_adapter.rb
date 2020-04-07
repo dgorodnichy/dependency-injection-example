@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'posts_adapter/medium'
-require 'posts_adapter/fake'
+require 'posts_source/medium'
+require 'medium/testing'
 
-Medium.adapter = Rails.env.test? ? PostsAdapter::Fake : PostsAdapter::Medium
+Medium::Testing.fake! if Rails.env.test?

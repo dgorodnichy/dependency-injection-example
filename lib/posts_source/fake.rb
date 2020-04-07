@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module PostsAdapter
+module PostsSource
   class Fake
     def initialize(username)
       @client = OpenStruct.new(
